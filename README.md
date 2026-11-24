@@ -59,22 +59,29 @@ git push
 
 ## H100 同步
 
-H100 只拉取本机已经推送的提交，不直接修改源码：
+H100 只拉取本机已经推送的提交，不直接修改源码。推荐使用同步脚本：
 
 ```bash
 cd <AgenticRobotics目录>
-git pull
+./scripts/sync_h100.sh
+```
+
+脚本会检查根仓库及所有已初始化子模块，发现未提交修改时停止；根仓库使用 fast-forward 拉取，随后同步子模块地址并更新到根仓库记录的版本。可用以下参数预览或查看帮助：
+
+```bash
+./scripts/sync_h100.sh --dry-run
+./scripts/sync_h100.sh --help
+```
+
+等价的手工命令为：
+
+```bash
+git pull --ff-only
+git submodule sync --recursive
 git submodule update --init --recursive
 ```
 
-单独执行 `git pull` 只会更新根仓库及其子模块指针；还需要 `git submodule update`，子模块工作目录才会切换到对应版本。
-
-同步后可检查实际版本：
-
-```bash
-git status --short --branch
-git submodule status
-```
+单独执行 `git pull` 只会更新根仓库及其子模块指针；还需要 `git submodule update`，子模块工作目录才会切换到对应版本。脚本结束时会输出根仓库和所有子模块的实际版本。
 
 ## 同步上游更新
 
