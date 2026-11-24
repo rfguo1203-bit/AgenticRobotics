@@ -1,0 +1,6 @@
+[submodule "src/pear"]
+	path = src/pear
+	url = https://github.com/mit-han-lab/pear.git
+[submodule "src/curobo"]
+	path = src/curobo
+	url = https://github.com/NVlabs/curobo.git

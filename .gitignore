@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Model weights, datasets, and simulation caches
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.trt
+*.engine
+.cache/
+
+# Runtime artifacts
+logs/
+outputs/
+runs/
+artifacts/
+*.log
+*.mp4
+*.avi
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/
