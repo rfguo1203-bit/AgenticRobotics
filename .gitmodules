@@ -1,6 +1,6 @@
 [submodule "src/pear"]
 	path = src/pear
-	url = https://github.com/mit-han-lab/pear.git
+	url = git@github.com:rfguo1203-bit/pear.git
 [submodule "src/curobo"]
 	path = src/curobo
-	url = https://github.com/NVlabs/curobo.git
+	url = git@github.com:rfguo1203-bit/curobo.git
