@@ -12,7 +12,6 @@ venv/
 .env
 .env.*
 !.env.example
-AGENTS_H100.md
 
 # Model weights, datasets, and simulation caches
 *.pt
